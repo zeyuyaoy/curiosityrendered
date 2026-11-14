@@ -37,7 +37,7 @@
     {
       "id": "answer",
       "start": 6.22,
-      "audioSeconds": 2.0,
+      "audioSeconds": 2,
       "words": [
         {
           "text": "Exactly",
@@ -108,5 +108,6 @@
         }
       ]
     }
-  ]
+  ],
+  "fingerprint": "9c72eae652090ce2fae8638796ea28d4e3c747dd0c558d69499581ecff55dd9a"
 }
