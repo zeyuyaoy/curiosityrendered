@@ -1,64 +1,70 @@
 {
   "id": "would-you-switch",
-  "template": "challenge",
+  "template": "monty-hall",
   "title": "Would You Switch Doors?",
-  "classification": "real",
-  "status": "draft",
-  "hook": "Three doors. One car.\nWould you *switch*?",
-  "challenge": {
-    "options": [
-      "Stay",
-      "Switch",
-      "Doesn't matter"
-    ],
-    "answer": 1,
-    "explanation": "Your pick wins 1 in 3. The host's reveal moves the other 2 in 3 onto the last door."
+  "classification": "simulated",
+  "status": "review",
+  "publicationTarget": "2026-11-19",
+  "hook": "One prize.\n*Pick a door.*",
+  "sim": {
+    "kind": "monty-hall",
+    "seed": 20261119,
+    "trials": 120
+  },
+  "voice": {
+    "provider": "kokoro",
+    "voice": "af_heart",
+    "speed": 1.04
   },
   "beats": [
     {
       "id": "hook",
-      "seconds": 3.0,
-      "narration": "Three doors. One car. You pick one."
+      "seconds": 3.5,
+      "narration": "Three doors. One prize. Pick a door."
     },
     {
       "id": "question",
-      "seconds": 4.5,
-      "narration": "The host, who knows, opens a goat door. Do you switch?",
-      "text": "The host opens a *goat* door. Switch?"
+      "seconds": 4.8,
+      "text": "The host knows.\nOne empty door opens.",
+      "narration": "The host knows where it is. They always open another, empty door."
     },
     {
       "id": "think",
-      "seconds": 3.0
+      "seconds": 2.3,
+      "text": "Stay or *switch*?",
+      "narration": "Stay or switch?"
     },
     {
       "id": "reveal",
-      "seconds": 4.5,
-      "narration": "Switch. It wins two times out of three.",
-      "text": "Switching wins *2 in 3*"
+      "seconds": 5.1,
+      "text": "*Switch.*",
+      "narration": "Switching wins whenever your first pick is wrong. That's two out of three."
+    },
+    {
+      "id": "simulation",
+      "seconds": 4.9,
+      "text": "Let's run it.",
+      "narration": "We played it again and again. Here's what happened."
     },
     {
       "id": "outro",
-      "seconds": 3.5,
-      "narration": "Your first pick only wins one time in three."
+      "seconds": 1.6,
+      "text": "Switching *doubles*\nyour chance."
     }
   ],
-  "cta": "Follow for the next one.",
   "cover": {
-    "headline": "WOULD YOU SWITCH?",
-    "sub": "Three doors. One car."
+    "headline": "WOULD YOU\nSWITCH?",
+    "sub": "Three doors. One prize.",
+    "beat": "hook"
   },
   "sources": [
     {
-      "claim": "Switching wins with probability 2/3 when the host always opens a goat door",
-      "ref": "Selvin, S. (1975). A problem in probability. The American Statistician 29(1):67"
+      "claim": "Switching wins two thirds of games when the host knows the prize location, always opens a different losing door and always offers the switch.",
+      "ref": "Steve Selvin, On the Monty Hall Problem (1975), The American Statistician. https://www.montyhallproblem.com/as.html"
     }
   ],
   "post": {
-    "caption": "Stay or switch? Under the standard rules (the host always opens a goat door), switching wins 2 out of 3 times.",
-    "hashtags": [
-      "#montyhall",
-      "#probability",
-      "#puzzle"
-    ]
+    "caption": "You pick a door. The host knows where the prize is and always opens another door that's empty. Then you're offered a switch. Would you take it?\n\nSwitching wins whenever your first pick misses. That happens two times out of three.",
+    "hashtags": ["#MontyHall", "#ProbabilityPuzzle", "#CuriosityRendered"]
   }
 }

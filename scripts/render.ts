@@ -9,6 +9,7 @@ import { brand } from "../src/brand/tokens";
 import type { EpisodeInput } from "../src/episode/schema";
 import { buildCaptions, toPages, type Timings } from "../src/episode/captions";
 import { resolveEpisode } from "../src/episode/resolve";
+import { simulateMonty } from "../src/sims/monty";
 import { arg, bundled, fail, loadSpec, missingAssets, outDir, positional, publicDir, ROOT } from "./lib";
 import { validateExport } from "./validate";
 
@@ -68,22 +69,41 @@ const git = (cmd: string) => {
   }
 };
 const pkg = JSON.parse(readFileSync(path.join(ROOT, "package.json"), "utf8"));
+const simulation = "sim" in spec ? spec.sim : null;
+const monty = simulation?.kind === "monty-hall" ? simulateMonty(simulation.seed, simulation.trials) : null;
 writeFileSync(
   path.join(dir, "manifest.json"),
   JSON.stringify(
     {
       id,
       title: resolved.spec.title,
+      template: resolved.spec.template,
       status: resolved.spec.status,
+      publicationTarget: resolved.spec.publicationTarget,
       classification: resolved.spec.classification,
-      content: { specSha: sha(JSON.stringify(raw)), commit: git("rev-parse --short HEAD"), dirty: Boolean(git("status --porcelain")) },
+      content: { spec: `episodes/${id}.json`, specSha: sha(JSON.stringify(raw)), commit: git("rev-parse --short HEAD"), dirty: Boolean(git("status --porcelain")) },
       renderedAt: new Date().toISOString(),
-      files: { "reel.mp4": createHash("sha256").update(readFileSync(path.join(dir, "reel.mp4"))).digest("hex"), "cover.png": createHash("sha256").update(readFileSync(path.join(dir, "cover.png"))).digest("hex") },
+      files: Object.fromEntries(["reel.mp4", "cover.png", "caption.txt", "transcript.srt"].map((file) => [
+        file, createHash("sha256").update(readFileSync(path.join(dir, file))).digest("hex"),
+      ])),
+      validation: "validation.json",
       video: { ...brand.video, durationInFrames: composition.durationInFrames, seconds: composition.durationInFrames / brand.video.fps, ...settings },
       tools: { remotion: pkg.dependencies.remotion, node: process.version },
       facts: resolved.facts,
-      simulation: "sim" in resolved.spec ? resolved.spec.sim : null,
-      narration: timings ? { ...spec.voice, audio: `public/episodes/${id}/${timings.audio}`, audioSha: sha(readFileSync(path.join(publicDir(id), timings.audio))) } : null,
+      simulation: monty ? {
+        ...simulation,
+        hostTieBreak: "lowest-numbered losing door other than the contestant's pick",
+        exact: { stay: "1/3", switch: "2/3" },
+        empirical: { stayWins: monty.stayWins, switchWins: monty.switchWins },
+      } : simulation,
+      illusion: "illusion" in spec ? { ...spec.illusion, diameter: 2 * spec.illusion.radius } : undefined,
+      narration: timings ? {
+        ...spec.voice,
+        audio: `public/episodes/${id}/${timings.audio}`,
+        timings: `public/episodes/${id}/timings.json`,
+        script: existsSync(path.join(dir, "script.json")) ? "script.json" : undefined,
+        audioSha: sha(readFileSync(path.join(publicDir(id), timings.audio))),
+      } : null,
       sources: resolved.spec.sources,
       provenance: [
         { asset: "visuals", origin: "generated in code (src/), no third-party footage" },
@@ -98,5 +118,6 @@ writeFileSync(
 );
 
 const problems = validateExport(id);
+writeFileSync(path.join(dir, "validation.json"), JSON.stringify({ command: `pnpm validate ${id}`, passed: problems.length === 0, problems }, null, 2) + "\n");
 if (problems.length) fail(`export written but failed checks:\n  ${problems.join("\n  ")}`);
-console.log(`\u2714 output/${id}/ reel.mp4, cover.png, caption.txt, transcript.srt, manifest.json (validated)`);
+console.log(`\u2714 output/${id}/ reel.mp4, cover.png, caption.txt, transcript.srt, manifest.json, validation.json`);

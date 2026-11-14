@@ -14,6 +14,7 @@ const Base = z.object({
   title: z.string().min(3),
   classification: z.enum(["real", "simulated", "hypothetical"]),
   status: z.enum(["draft", "review", "approved"]).default("draft"),
+  publicationTarget: z.iso.date().optional(),
   hook: z.string().min(3),
   beats: z.array(Beat).min(3),
   voice: z
@@ -54,6 +55,14 @@ export const EpisodeSpec = z.discriminatedUnion("template", [
   Base.extend({
     template: z.literal("explainer"),
     points: z.array(z.object({ heading: z.string().max(28), body: z.string().max(90) })).min(1).max(4),
+  }),
+  Base.extend({
+    template: z.literal("monty-hall"),
+    sim: z.object({ kind: z.literal("monty-hall"), seed: z.uint32(), trials: z.number().int().min(30).max(120) }),
+  }),
+  Base.extend({
+    template: z.literal("ebbinghaus"),
+    illusion: z.object({ radius: z.number().int().min(64).max(88) }),
   }),
 ]);
 

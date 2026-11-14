@@ -7,7 +7,9 @@ import { Headline } from "../components/Headline";
 import { Sfx } from "../components/Sfx";
 import { Stage } from "../components/Stage";
 import { Challenge } from "../templates/Challenge";
+import { Ebbinghaus } from "../templates/Ebbinghaus";
 import { Explainer } from "../templates/Explainer";
+import { MontyHall } from "../templates/MontyHall";
 import { Simulation } from "../templates/Simulation";
 import { buildCaptions, type Timings } from "./captions";
 import { EpisodeContext } from "./context";
@@ -22,7 +24,7 @@ export type EpisodeProps = {
   bare?: boolean;
 };
 
-const bodies = { simulation: Simulation, challenge: Challenge, explainer: Explainer };
+const bodies = { simulation: Simulation, challenge: Challenge, explainer: Explainer, "monty-hall": MontyHall, ebbinghaus: Ebbinghaus };
 
 export const Episode: React.FC<EpisodeProps> = ({ spec, timings, debug, bare }) => {
   const resolved = useMemo(() => resolveEpisode(EpisodeSpec.parse(spec)), [spec]);
@@ -30,8 +32,9 @@ export const Episode: React.FC<EpisodeProps> = ({ spec, timings, debug, bare }) 
   const captions = useMemo(() => buildCaptions(timeline.beats, timings), [timeline, timings]);
   const Body = bodies[s.template];
   const last = timeline.beats[timeline.beats.length - 1];
+  const captionHook = s.template === "monty-hall" || s.template === "ebbinghaus";
   const hookEndMs = (timeline.beats[0].duration / FPS) * 1000;
-  const shown = useMemo(() => captions.filter((c) => c.startMs >= hookEndMs), [captions, hookEndMs]);
+  const shown = useMemo(() => captionHook ? captions : captions.filter((c) => c.startMs >= hookEndMs), [captions, captionHook, hookEndMs]);
 
   return (
     <EpisodeContext.Provider value={{ ...resolved, captions, bare: Boolean(bare) }}>
