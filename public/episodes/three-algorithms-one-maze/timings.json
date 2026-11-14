@@ -1,0 +1,348 @@
+{
+  "audio": "narration.wav",
+  "sampleRate": 48000,
+  "beats": [
+    {
+      "id": "hook",
+      "start": 0.12,
+      "audioSeconds": 3.7,
+      "words": [
+        {
+          "text": "Three",
+          "startMs": 395,
+          "endMs": 620
+        },
+        {
+          "text": "algorithms,",
+          "startMs": 620,
+          "endMs": 1220
+        },
+        {
+          "text": "one",
+          "startMs": 1270,
+          "endMs": 1495
+        },
+        {
+          "text": "maze.",
+          "startMs": 1495,
+          "endMs": 2045
+        },
+        {
+          "text": "Which",
+          "startMs": 2145,
+          "endMs": 2345
+        },
+        {
+          "text": "finds",
+          "startMs": 2345,
+          "endMs": 2633
+        },
+        {
+          "text": "the",
+          "startMs": 2633,
+          "endMs": 2720
+        },
+        {
+          "text": "best",
+          "startMs": 2720,
+          "endMs": 3020
+        },
+        {
+          "text": "route?",
+          "startMs": 3020,
+          "endMs": 3570
+        }
+      ]
+    },
+    {
+      "id": "bfs",
+      "start": 4.12,
+      "audioSeconds": 4.575,
+      "words": [
+        {
+          "text": "BFS",
+          "startMs": 4395,
+          "endMs": 4895
+        },
+        {
+          "text": "spreads",
+          "startMs": 4895,
+          "endMs": 5232
+        },
+        {
+          "text": "out",
+          "startMs": 5232,
+          "endMs": 5408
+        },
+        {
+          "text": "in",
+          "startMs": 5408,
+          "endMs": 5495
+        },
+        {
+          "text": "all",
+          "startMs": 5495,
+          "endMs": 5658
+        },
+        {
+          "text": "directions.",
+          "startMs": 5658,
+          "endMs": 6545
+        },
+        {
+          "text": "Shortest",
+          "startMs": 6695,
+          "endMs": 7170
+        },
+        {
+          "text": "route,",
+          "startMs": 7170,
+          "endMs": 7495
+        },
+        {
+          "text": "guaranteed.",
+          "startMs": 7570,
+          "endMs": 8445
+        }
+      ]
+    },
+    {
+      "id": "greedy",
+      "start": 8.92,
+      "audioSeconds": 3.925,
+      "words": [
+        {
+          "text": "Greedy",
+          "startMs": 9195,
+          "endMs": 9495
+        },
+        {
+          "text": "heads",
+          "startMs": 9495,
+          "endMs": 9770
+        },
+        {
+          "text": "for",
+          "startMs": 9770,
+          "endMs": 9882
+        },
+        {
+          "text": "the",
+          "startMs": 9882,
+          "endMs": 9995
+        },
+        {
+          "text": "exit,",
+          "startMs": 9995,
+          "endMs": 10595
+        },
+        {
+          "text": "and",
+          "startMs": 10695,
+          "endMs": 10820
+        },
+        {
+          "text": "takes",
+          "startMs": 10820,
+          "endMs": 11058
+        },
+        {
+          "text": "a",
+          "startMs": 11058,
+          "endMs": 11120
+        },
+        {
+          "text": "24-step",
+          "startMs": 11120,
+          "endMs": 11920
+        },
+        {
+          "text": "detour.",
+          "startMs": 11920,
+          "endMs": 12595
+        }
+      ]
+    },
+    {
+      "id": "astar",
+      "start": 13.12,
+      "audioSeconds": 3.95,
+      "words": [
+        {
+          "text": "A-star",
+          "startMs": 13395,
+          "endMs": 13770
+        },
+        {
+          "text": "counts",
+          "startMs": 13770,
+          "endMs": 14058
+        },
+        {
+          "text": "steps",
+          "startMs": 14058,
+          "endMs": 14370
+        },
+        {
+          "text": "taken,",
+          "startMs": 14370,
+          "endMs": 14970
+        },
+        {
+          "text": "plus",
+          "startMs": 15070,
+          "endMs": 15332
+        },
+        {
+          "text": "an",
+          "startMs": 15332,
+          "endMs": 15458
+        },
+        {
+          "text": "estimate",
+          "startMs": 15458,
+          "endMs": 15907
+        },
+        {
+          "text": "of",
+          "startMs": 15907,
+          "endMs": 15982
+        },
+        {
+          "text": "what's",
+          "startMs": 15982,
+          "endMs": 16195
+        },
+        {
+          "text": "left.",
+          "startMs": 16195,
+          "endMs": 16820
+        }
+      ]
+    },
+    {
+      "id": "verdict",
+      "start": 17.32,
+      "audioSeconds": 6.6,
+      "words": [
+        {
+          "text": "Greedy",
+          "startMs": 17570,
+          "endMs": 17882
+        },
+        {
+          "text": "checked",
+          "startMs": 17882,
+          "endMs": 18158
+        },
+        {
+          "text": "the",
+          "startMs": 18158,
+          "endMs": 18245
+        },
+        {
+          "text": "least,",
+          "startMs": 18245,
+          "endMs": 18695
+        },
+        {
+          "text": "but",
+          "startMs": 18770,
+          "endMs": 18932
+        },
+        {
+          "text": "detoured.",
+          "startMs": 18932,
+          "endMs": 19770
+        },
+        {
+          "text": "A-star",
+          "startMs": 19932,
+          "endMs": 20420
+        },
+        {
+          "text": "found",
+          "startMs": 20420,
+          "endMs": 20658
+        },
+        {
+          "text": "the",
+          "startMs": 20658,
+          "endMs": 20758
+        },
+        {
+          "text": "shortest",
+          "startMs": 20758,
+          "endMs": 21245
+        },
+        {
+          "text": "route",
+          "startMs": 21245,
+          "endMs": 21570
+        },
+        {
+          "text": "with",
+          "startMs": 21570,
+          "endMs": 21708
+        },
+        {
+          "text": "about",
+          "startMs": 21708,
+          "endMs": 21932
+        },
+        {
+          "text": "a",
+          "startMs": 21932,
+          "endMs": 22045
+        },
+        {
+          "text": "third",
+          "startMs": 22045,
+          "endMs": 22332
+        },
+        {
+          "text": "of",
+          "startMs": 22332,
+          "endMs": 22420
+        },
+        {
+          "text": "BFS's",
+          "startMs": 22420,
+          "endMs": 23045
+        },
+        {
+          "text": "checking.",
+          "startMs": 23045,
+          "endMs": 23695
+        }
+      ]
+    },
+    {
+      "id": "outro",
+      "start": 24.22,
+      "audioSeconds": 2.125,
+      "words": [
+        {
+          "text": "Search",
+          "startMs": 24495,
+          "endMs": 24720
+        },
+        {
+          "text": "smart,",
+          "startMs": 24720,
+          "endMs": 25095
+        },
+        {
+          "text": "not",
+          "startMs": 25145,
+          "endMs": 25308
+        },
+        {
+          "text": "everywhere.",
+          "startMs": 25308,
+          "endMs": 26070
+        }
+      ]
+    }
+  ]
+}
