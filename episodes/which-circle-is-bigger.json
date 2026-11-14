@@ -1,73 +1,58 @@
 {
   "id": "which-circle-is-bigger",
-  "template": "explainer",
+  "template": "ebbinghaus",
   "title": "Which Circle Is Bigger?",
+  "publicationTarget": "2026-11-21",
   "classification": "real",
-  "status": "draft",
-  "hook": "Which middle circle\nis *bigger*?",
-  "points": [
-    {
-      "heading": "Same size",
-      "body": "Both middle circles are exactly the same width."
-    },
-    {
-      "heading": "Context lies",
-      "body": "Big neighbours make a circle look smaller; small ones make it look bigger."
-    },
-    {
-      "heading": "Ebbinghaus illusion",
-      "body": "Your brain judges size relative to what surrounds it."
-    }
-  ],
+  "status": "review",
+  "hook": "Which ~orange circle~\nis *bigger*?",
+  "illusion": {
+    "radius": 78
+  },
+  "voice": {
+    "provider": "kokoro",
+    "voice": "af_heart",
+    "speed": 1.03
+  },
   "beats": [
     {
       "id": "hook",
-      "seconds": 3.0,
-      "narration": "Which middle circle is bigger?"
+      "seconds": 4.4,
+      "narration": "Which orange circle is bigger?"
     },
     {
-      "id": "point-1",
-      "seconds": 3.5,
-      "narration": "Neither. They're exactly the same size."
+      "id": "reveal",
+      "seconds": 1.7,
+      "text": "Let’s *measure*."
     },
     {
-      "id": "point-2",
-      "seconds": 3.5,
-      "narration": "Big neighbours make a circle look smaller."
+      "id": "answer",
+      "seconds": 2.3,
+      "narration": "Exactly the same size."
     },
     {
-      "id": "point-3",
-      "seconds": 3.5,
-      "narration": "Your brain judges size by its surroundings."
-    },
-    {
-      "id": "takeaway",
-      "seconds": 3.0,
-      "narration": "Size is relative.",
-      "text": "Size is judged by *context*"
+      "id": "context",
+      "seconds": 3.6,
+      "text": "Same size.\nDifferent ~surroundings~.",
+      "narration": "The neighbours can change how big they look."
     },
     {
       "id": "outro",
-      "seconds": 2.5,
-      "narration": "Look again."
+      "seconds": 1.0
     }
   ],
   "cover": {
-    "headline": "LOOK AGAIN.",
-    "sub": "Which middle circle is bigger?"
+    "headline": "WHICH IS\nBIGGER?",
+    "beat": "hook"
   },
   "sources": [
     {
-      "claim": "Surrounding inducer size changes perceived target size (Ebbinghaus illusion)",
-      "ref": "Roberts, Harris & Yates (2005). The roles of inducer size and distance in the Ebbinghaus illusion. Perception 34(7):847-856"
+      "claim": "Surrounding circles can alter the apparent size of a target circle",
+      "ref": "Roberts, Harris & Yates (2005), Perception 34(7):847-856, https://doi.org/10.1068/p5273"
     }
   ],
   "post": {
-    "caption": "The two middle circles are identical. Your brain sizes things up by their surroundings.",
-    "hashtags": [
-      "#illusion",
-      "#perception",
-      "#brain"
-    ]
+    "caption": "The orange circles are exactly the same size. The circles around them can change how big they look. That’s the Ebbinghaus illusion.",
+    "hashtags": ["#OpticalIllusion", "#EbbinghausIllusion", "#VisualPerception"]
   }
 }

@@ -1,0 +1,112 @@
+{
+  "audio": "narration.wav",
+  "sampleRate": 48000,
+  "beats": [
+    {
+      "id": "hook",
+      "start": 0.12,
+      "audioSeconds": 2.1,
+      "words": [
+        {
+          "text": "Which",
+          "startMs": 370,
+          "endMs": 582
+        },
+        {
+          "text": "orange",
+          "startMs": 582,
+          "endMs": 920
+        },
+        {
+          "text": "circle",
+          "startMs": 920,
+          "endMs": 1220
+        },
+        {
+          "text": "is",
+          "startMs": 1220,
+          "endMs": 1370
+        },
+        {
+          "text": "bigger?",
+          "startMs": 1370,
+          "endMs": 1945
+        }
+      ]
+    },
+    {
+      "id": "answer",
+      "start": 6.22,
+      "audioSeconds": 2.0,
+      "words": [
+        {
+          "text": "Exactly",
+          "startMs": 6495,
+          "endMs": 6982
+        },
+        {
+          "text": "the",
+          "startMs": 6982,
+          "endMs": 7070
+        },
+        {
+          "text": "same",
+          "startMs": 7070,
+          "endMs": 7345
+        },
+        {
+          "text": "size.",
+          "startMs": 7345,
+          "endMs": 7970
+        }
+      ]
+    },
+    {
+      "id": "context",
+      "start": 8.52,
+      "audioSeconds": 2.525,
+      "words": [
+        {
+          "text": "The",
+          "startMs": 8770,
+          "endMs": 8845
+        },
+        {
+          "text": "neighbours",
+          "startMs": 8845,
+          "endMs": 9295
+        },
+        {
+          "text": "can",
+          "startMs": 9295,
+          "endMs": 9445
+        },
+        {
+          "text": "change",
+          "startMs": 9445,
+          "endMs": 9745
+        },
+        {
+          "text": "how",
+          "startMs": 9745,
+          "endMs": 9920
+        },
+        {
+          "text": "big",
+          "startMs": 9920,
+          "endMs": 10145
+        },
+        {
+          "text": "they",
+          "startMs": 10145,
+          "endMs": 10295
+        },
+        {
+          "text": "look.",
+          "startMs": 10295,
+          "endMs": 10795
+        }
+      ]
+    }
+  ]
+}

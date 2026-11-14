@@ -20,13 +20,17 @@ export const lintEpisode = (raw: unknown) => {
   if (new Set(ids).size !== ids.length) errors.push(`beats: duplicate ids in [${ids.join(", ")}]`);
   if (ids[0] !== "hook") errors.push(`beats: first beat must be "hook" (got "${ids[0]}")`);
   if (ids.at(-1) !== "outro") errors.push(`beats: last beat must be "outro" (got "${ids.at(-1)}")`);
-  const required =
-    spec.template === "simulation"
-      ? simBeats[spec.sim.kind]
-      : spec.template === "challenge"
-        ? ["question", "think", "reveal"]
-        : [...spec.points.map((_, i) => `point-${i + 1}`), "takeaway"];
+  const required = {
+    simulation: spec.template === "simulation" ? simBeats[spec.sim.kind] : [],
+    challenge: ["question", "think", "reveal"],
+    explainer: spec.template === "explainer" ? [...spec.points.map((_, i) => `point-${i + 1}`), "takeaway"] : [],
+    "monty-hall": ["question", "think", "reveal", "simulation"],
+    ebbinghaus: ["reveal", "answer", "context"],
+  }[spec.template];
   for (const r of required) if (!ids.includes(r)) errors.push(`beats: ${spec.template} template needs a "${r}" beat`);
+  if ((spec.template === "monty-hall" || spec.template === "ebbinghaus") &&
+      ids.join(",") !== ["hook", ...required, "outro"].join(","))
+    errors.push(`beats: ${spec.template} expects hook, ${required.join(", ")}, outro in order`);
   if (spec.template === "challenge" && spec.challenge.answer >= spec.challenge.options.length)
     errors.push(`challenge.answer: index ${spec.challenge.answer} but only ${spec.challenge.options.length} options`);
   if (spec.classification === "real" && spec.sources.length === 0)
