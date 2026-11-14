@@ -7,6 +7,7 @@ type Word = { text: string; startMs: number; endMs: number };
 export type Timings = {
   audio: string;
   sampleRate: number;
+  fingerprint?: string;
   beats: { id: string; start: number; audioSeconds: number; words: Word[] | null }[];
 };
 
@@ -25,8 +26,8 @@ export const buildCaptions = (beats: TimedBeat[], timings: Timings | null): Capt
     } else if (t?.words) {
       ws = t.words;
     } else {
-      const start = (b.from / FPS + LEAD_S) * 1000;
-      const span = Math.min(t ? t.audioSeconds * 1000 : (shown.length / 2.8) * 1000, (b.duration / FPS - LEAD_S - 0.1) * 1000);
+      const start = (t ? t.start : b.from / FPS + LEAD_S) * 1000;
+      const span = Math.min(t ? t.audioSeconds * 1000 : (shown.length / 2.8) * 1000, ((b.from + b.duration) / FPS - 0.1) * 1000 - start);
       const weight = shown.map((w) => w.length + 3);
       const total = weight.reduce((a, c) => a + c, 0);
       let acc = 0;

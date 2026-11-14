@@ -98,6 +98,13 @@ describe("timeline and captions", () => {
     expect(caps[0].text).toBe("A*");
     expect(caps[0].startMs).toBe(1000);
   });
+  it("captions without word timings start with the recorded audio and stay inside the beat", () => {
+    const b = timeline.beats.find((x) => x.id === "astar")!;
+    const start = b.from / FPS + 0.12;
+    const caps = buildCaptions([b], { audio: "x.wav", sampleRate: 48000, beats: [{ id: b.id, start, audioSeconds: 60, words: null }] });
+    expect(caps[0].startMs).toBe(Math.round(start * 1000));
+    expect(caps.at(-1)!.endMs).toBeLessThanOrEqual(((b.from + b.duration) / FPS) * 1000);
+  });
 });
 
 describe("layout and determinism", () => {

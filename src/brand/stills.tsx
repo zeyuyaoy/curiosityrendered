@@ -1,6 +1,6 @@
 import React from "react";
 import { AbsoluteFill } from "remotion";
-import { Stage } from "../components/Stage";
+import { SafeOverlay } from "../components/Stage";
 import { Episode, type EpisodeProps } from "../episode/Episode";
 import { resolveEpisode } from "../episode/resolve";
 import { EpisodeSpec } from "../episode/schema";
@@ -79,7 +79,7 @@ export const Cover: React.FC<Pick<EpisodeProps, "spec" | "debug">> = ({ spec, de
           {r.spec.cover.sub}
         </div>
       ) : null}
-      {debug ? <Stage debug /> : null}
+      {debug ? <SafeOverlay /> : null}
     </AbsoluteFill>
   );
 };

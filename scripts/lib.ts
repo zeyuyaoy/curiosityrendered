@@ -1,11 +1,11 @@
 import { bundle } from "@remotion/bundler";
+import { createHash } from "node:crypto";
 import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
 import type { Timings } from "../src/episode/captions";
 import { lintEpisode } from "../src/episode/lint";
-import { resolveEpisode } from "../src/episode/resolve";
 import type { EpisodeSpec } from "../src/episode/schema";
-import { FPS } from "../src/episode/timeline";
+import { FPS, toTimeline } from "../src/episode/timeline";
 import { episodes } from "../src/episodes";
 
 export const ROOT = path.resolve(import.meta.dirname, "..");
@@ -22,6 +22,23 @@ export const loadSpec = (id: string) => {
   return { raw, spec };
 };
 
+const esc = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+export const narrationScript = (spec: EpisodeSpec, provider?: string) => {
+  const voice = { provider: "kokoro", voice: "af_heart", speed: 1, lexicon: {} as Record<string, string>, ...spec.voice };
+  if (provider) voice.provider = provider;
+  const speak = (s: string) =>
+    Object.entries(voice.lexicon).reduce((t, [from, to]) => t.replace(new RegExp(`(?<![\\w*])${esc(from)}(?![\\w*])`, "g"), to), s);
+  return {
+    id: spec.id,
+    voice,
+    beats: toTimeline(spec.beats).beats.map((b) => ({ id: b.id, start: b.from / FPS, seconds: b.duration / FPS, narration: speak(b.narration) })),
+  };
+};
+
+export const synthesisFingerprint = (script: ReturnType<typeof narrationScript>) =>
+  createHash("sha256").update(JSON.stringify(script)).digest("hex");
+
 export const missingAssets = (id: string, wantsVoice: boolean, spec?: EpisodeSpec) => {
   const problems: string[] = [];
   for (const s of ["click", "tick", "whoosh", "ding", "reveal", "scan", "bed"])
@@ -31,15 +48,8 @@ export const missingAssets = (id: string, wantsVoice: boolean, spec?: EpisodeSpe
   if (existsSync(timings)) {
     const t = JSON.parse(readFileSync(timings, "utf8")) as Timings;
     if (!existsSync(path.join(publicDir(id), t.audio))) problems.push(`timings.json points at missing ${t.audio}`);
-    if (spec) {
-      const beats = resolveEpisode(spec).timeline.beats.filter((b) => b.narration);
-      const stale = beats.some((b) => {
-        const tb = t.beats.find((x) => x.id === b.id);
-        const n = b.narration.split(/\s+/).filter(Boolean).length;
-        return !tb || Math.abs(tb.start - (b.from / FPS + 0.12)) > 0.02 || (tb.words !== null && tb.words.length !== n);
-      });
-      if (stale || t.beats.length !== beats.length) problems.push(`narration for ${id} is out of date with the spec (run pnpm narrate ${id})`);
-    }
+    if (spec && t.fingerprint !== synthesisFingerprint(narrationScript(spec)))
+      problems.push(`narration for ${id} is out of date with the spec (run pnpm narrate ${id})`);
   }
   return problems;
 };
