@@ -1,0 +1,14 @@
+[project]
+name = "curiosityrendered-tts"
+version = "0.1.0"
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "kokoro>=0.9.4",
+    "soundfile",
+    "numpy",
+    # misaki (kokoro's G2P) otherwise tries `spacy download` at runtime, which fails in a uv venv without pip
+    "en-core-web-sm",
+]
+
+[tool.uv.sources]
+en-core-web-sm = { url = "https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl" }

@@ -1,0 +1,80 @@
+{
+  "id": "three-algorithms-one-maze",
+  "template": "simulation",
+  "title": "Three Algorithms. One Maze.",
+  "classification": "simulated",
+  "status": "review",
+  "hook": "3 algorithms. 1 maze.\nWhich finds the\n*best* route?",
+  "sim": {
+    "kind": "maze",
+    "cellsX": 10,
+    "cellsY": 9,
+    "seed": 2348,
+    "loops": 0.08
+  },
+  "voice": {
+    "provider": "kokoro",
+    "voice": "af_heart",
+    "speed": 1.05,
+    "lexicon": {
+      "A*": "[A-star](/ˈAstˌɑɹ/)"
+    }
+  },
+  "beats": [
+    {
+      "id": "hook",
+      "seconds": 4.0,
+      "narration": "Three algorithms, one maze. Which finds the best route?"
+    },
+    {
+      "id": "bfs",
+      "seconds": 4.8,
+      "narration": "BFS spreads out in all directions. Shortest route, guaranteed.",
+      "text": "BFS spreads out\nin all directions"
+    },
+    {
+      "id": "greedy",
+      "seconds": 4.2,
+      "narration": "Greedy heads for the exit, and takes a {greedy.extra}-step detour.",
+      "text": "Greedy heads straight\nfor the ~exit~"
+    },
+    {
+      "id": "astar",
+      "seconds": 4.2,
+      "narration": "A* counts steps taken, plus an estimate of what's left.",
+      "text": "A* = *steps taken*\n+ ~estimated distance left~"
+    },
+    {
+      "id": "verdict",
+      "seconds": 6.9,
+      "narration": "Greedy checked the least, but detoured. A* found the shortest route with {astar.searchShare} BFS's checking.",
+      "text": "Greedy checked least.\nA* found the *best*."
+    },
+    {
+      "id": "outro",
+      "seconds": 2.5,
+      "narration": "Search smart, not everywhere.",
+      "text": "Search *smart*,\nnot everywhere."
+    }
+  ],
+  "cover": {
+    "headline": "WHO TOOK\nTHE DETOUR?",
+    "beat": "verdict"
+  },
+  "sources": [
+    {
+      "claim": "A* with an admissible heuristic returns a shortest path",
+      "ref": "Hart, Nilsson & Raphael (1968), IEEE Trans. Systems Science and Cybernetics 4(2):100-107"
+    }
+  ],
+  "post": {
+    "caption": "Three algorithms. One maze. Which finds the best route?\n\nIn this maze, Greedy checks the fewest squares ({greedy.expanded}) but takes a {greedy.extra}-step detour: its route is {greedy.path} steps instead of {optimal}. BFS spreads out in all directions and finds the shortest route after checking {bfs.expanded} squares. A* finds an equally short route after checking only {astar.expanded}.\n\nA*'s trick: steps taken so far, plus an estimate of the distance left that never overshoots, so it never settles for a longer route.\n\n(Squares checked is a count of the work, not a stopwatch: real running time also depends on the cost of each step.)\n\nSearch smart, not everywhere.",
+    "hashtags": [
+      "#algorithms",
+      "#computerscience",
+      "#maze",
+      "#astar",
+      "#coding"
+    ]
+  }
+}

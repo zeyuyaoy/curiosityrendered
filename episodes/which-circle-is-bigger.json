@@ -1,0 +1,73 @@
+{
+  "id": "which-circle-is-bigger",
+  "template": "explainer",
+  "title": "Which Circle Is Bigger?",
+  "classification": "real",
+  "status": "draft",
+  "hook": "Which middle circle\nis *bigger*?",
+  "points": [
+    {
+      "heading": "Same size",
+      "body": "Both middle circles are exactly the same width."
+    },
+    {
+      "heading": "Context lies",
+      "body": "Big neighbours make a circle look smaller; small ones make it look bigger."
+    },
+    {
+      "heading": "Ebbinghaus illusion",
+      "body": "Your brain judges size relative to what surrounds it."
+    }
+  ],
+  "beats": [
+    {
+      "id": "hook",
+      "seconds": 3.0,
+      "narration": "Which middle circle is bigger?"
+    },
+    {
+      "id": "point-1",
+      "seconds": 3.5,
+      "narration": "Neither. They're exactly the same size."
+    },
+    {
+      "id": "point-2",
+      "seconds": 3.5,
+      "narration": "Big neighbours make a circle look smaller."
+    },
+    {
+      "id": "point-3",
+      "seconds": 3.5,
+      "narration": "Your brain judges size by its surroundings."
+    },
+    {
+      "id": "takeaway",
+      "seconds": 3.0,
+      "narration": "Size is relative.",
+      "text": "Size is judged by *context*"
+    },
+    {
+      "id": "outro",
+      "seconds": 2.5,
+      "narration": "Look again."
+    }
+  ],
+  "cover": {
+    "headline": "LOOK AGAIN.",
+    "sub": "Which middle circle is bigger?"
+  },
+  "sources": [
+    {
+      "claim": "Surrounding inducer size changes perceived target size (Ebbinghaus illusion)",
+      "ref": "Roberts, Harris & Yates (2005). The roles of inducer size and distance in the Ebbinghaus illusion. Perception 34(7):847-856"
+    }
+  ],
+  "post": {
+    "caption": "The two middle circles are identical. Your brain sizes things up by their surroundings.",
+    "hashtags": [
+      "#illusion",
+      "#perception",
+      "#brain"
+    ]
+  }
+}

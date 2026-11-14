@@ -1,0 +1,64 @@
+{
+  "id": "would-you-switch",
+  "template": "challenge",
+  "title": "Would You Switch Doors?",
+  "classification": "real",
+  "status": "draft",
+  "hook": "Three doors. One car.\nWould you *switch*?",
+  "challenge": {
+    "options": [
+      "Stay",
+      "Switch",
+      "Doesn't matter"
+    ],
+    "answer": 1,
+    "explanation": "Your pick wins 1 in 3. The host's reveal moves the other 2 in 3 onto the last door."
+  },
+  "beats": [
+    {
+      "id": "hook",
+      "seconds": 3.0,
+      "narration": "Three doors. One car. You pick one."
+    },
+    {
+      "id": "question",
+      "seconds": 4.5,
+      "narration": "The host, who knows, opens a goat door. Do you switch?",
+      "text": "The host opens a *goat* door. Switch?"
+    },
+    {
+      "id": "think",
+      "seconds": 3.0
+    },
+    {
+      "id": "reveal",
+      "seconds": 4.5,
+      "narration": "Switch. It wins two times out of three.",
+      "text": "Switching wins *2 in 3*"
+    },
+    {
+      "id": "outro",
+      "seconds": 3.5,
+      "narration": "Your first pick only wins one time in three."
+    }
+  ],
+  "cta": "Follow for the next one.",
+  "cover": {
+    "headline": "WOULD YOU SWITCH?",
+    "sub": "Three doors. One car."
+  },
+  "sources": [
+    {
+      "claim": "Switching wins with probability 2/3 when the host always opens a goat door",
+      "ref": "Selvin, S. (1975). A problem in probability. The American Statistician 29(1):67"
+    }
+  ],
+  "post": {
+    "caption": "Stay or switch? Under the standard rules (the host always opens a goat door), switching wins 2 out of 3 times.",
+    "hashtags": [
+      "#montyhall",
+      "#probability",
+      "#puzzle"
+    ]
+  }
+}
