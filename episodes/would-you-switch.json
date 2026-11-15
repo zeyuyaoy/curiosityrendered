@@ -19,37 +19,38 @@
   "beats": [
     {
       "id": "hook",
-      "seconds": 3.5,
-      "narration": "Three doors. One prize. Pick a door."
+      "seconds": 1.77,
+      "narration": "Pick a door."
     },
     {
       "id": "question",
-      "seconds": 4.8,
-      "text": "The host knows.\nOne empty door opens.",
-      "narration": "The host knows where it is. They always open another, empty door."
+      "seconds": 2.63,
+      "text": "The host knows.\nAlways opens another\nempty door.",
+      "narration": "The host opens an empty door."
     },
     {
       "id": "think",
-      "seconds": 2.3,
+      "seconds": 2,
       "text": "Stay or *switch*?",
       "narration": "Stay or switch?"
     },
     {
       "id": "reveal",
-      "seconds": 5.1,
-      "text": "*Switch.*",
-      "narration": "Switching wins whenever your first pick is wrong. That's two out of three."
+      "seconds": 6,
+      "text": "Three equally likely\nprize locations",
+      "narration": "Prize behind your door? Stay wins. Behind either other door? Switch wins."
     },
     {
       "id": "simulation",
-      "seconds": 4.9,
-      "text": "Let's run it.",
-      "narration": "We played it again and again. Here's what happened."
+      "seconds": 3.5,
+      "text": "Simulation",
+      "narration": "We simulated a hundred and twenty games."
     },
     {
       "id": "outro",
-      "seconds": 1.6,
-      "text": "Switching *doubles*\nyour chance."
+      "seconds": 2.8,
+      "text": "",
+      "narration": "Switching wins two out of three times."
     }
   ],
   "cover": {
@@ -64,7 +65,7 @@
     }
   ],
   "post": {
-    "caption": "You pick a door. The host knows where the prize is and always opens another door that's empty. Then you're offered a switch. Would you take it?\n\nSwitching wins whenever your first pick misses. That happens two times out of three.",
+    "caption": "You pick one of three doors. The host knows where the prize is, always opens a different door that’s empty, and always offers you the switch. Would you take it?\n\nSwitching wins whenever your first pick misses. With the prize equally likely behind each door, the exact chances are 1 in 3 for staying and 2 in 3 for switching.\n\nIn our 120-game simulation, staying won 34 games (28.3%) and switching won 86 (71.7%).",
     "hashtags": ["#MontyHall", "#ProbabilityPuzzle", "#CuriosityRendered"]
   }
 }

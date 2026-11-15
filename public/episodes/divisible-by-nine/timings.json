@@ -1,0 +1,215 @@
+{
+  "audio": "narration.wav",
+  "sampleRate": 48000,
+  "beats": [
+    {
+      "id": "hook",
+      "start": 0.12,
+      "audioSeconds": 2.925,
+      "words": [
+        {
+          "text": "Is",
+          "startMs": 345,
+          "endMs": 520
+        },
+        {
+          "text": "this",
+          "startMs": 520,
+          "endMs": 720
+        },
+        {
+          "text": "divisible",
+          "startMs": 720,
+          "endMs": 1170
+        },
+        {
+          "text": "by",
+          "startMs": 1170,
+          "endMs": 1345
+        },
+        {
+          "text": "nine?",
+          "startMs": 1345,
+          "endMs": 1820
+        },
+        {
+          "text": "Don't",
+          "startMs": 1920,
+          "endMs": 2133
+        },
+        {
+          "text": "divide.",
+          "startMs": 2133,
+          "endMs": 2795
+        }
+      ]
+    },
+    {
+      "id": "sum",
+      "start": 3.32,
+      "audioSeconds": 2.825,
+      "words": [
+        {
+          "text": "Add",
+          "startMs": 3595,
+          "endMs": 3758
+        },
+        {
+          "text": "its",
+          "startMs": 3758,
+          "endMs": 3945
+        },
+        {
+          "text": "digits:",
+          "startMs": 3945,
+          "endMs": 4470
+        },
+        {
+          "text": "135.",
+          "startMs": 4570,
+          "endMs": 5895
+        }
+      ]
+    },
+    {
+      "id": "again",
+      "start": 6.42,
+      "audioSeconds": 3.225,
+      "words": [
+        {
+          "text": "1",
+          "startMs": 6695,
+          "endMs": 6920
+        },
+        {
+          "text": "plus",
+          "startMs": 6920,
+          "endMs": 7170
+        },
+        {
+          "text": "3",
+          "startMs": 7170,
+          "endMs": 7395
+        },
+        {
+          "text": "plus",
+          "startMs": 7395,
+          "endMs": 7645
+        },
+        {
+          "text": "5",
+          "startMs": 7645,
+          "endMs": 7882
+        },
+        {
+          "text": "is",
+          "startMs": 7882,
+          "endMs": 7995
+        },
+        {
+          "text": "9.",
+          "startMs": 7995,
+          "endMs": 8470
+        },
+        {
+          "text": "So,",
+          "startMs": 8582,
+          "endMs": 8770
+        },
+        {
+          "text": "yes!",
+          "startMs": 8820,
+          "endMs": 9395
+        }
+      ]
+    },
+    {
+      "id": "outro",
+      "start": 9.92,
+      "audioSeconds": 4.875,
+      "words": [
+        {
+          "text": "If",
+          "startMs": 10145,
+          "endMs": 10320
+        },
+        {
+          "text": "the",
+          "startMs": 10320,
+          "endMs": 10432
+        },
+        {
+          "text": "digits",
+          "startMs": 10432,
+          "endMs": 10832
+        },
+        {
+          "text": "add",
+          "startMs": 10832,
+          "endMs": 11095
+        },
+        {
+          "text": "to",
+          "startMs": 11095,
+          "endMs": 11195
+        },
+        {
+          "text": "a",
+          "startMs": 11195,
+          "endMs": 11295
+        },
+        {
+          "text": "multiple",
+          "startMs": 11295,
+          "endMs": 11732
+        },
+        {
+          "text": "of",
+          "startMs": 11732,
+          "endMs": 11820
+        },
+        {
+          "text": "nine,",
+          "startMs": 11820,
+          "endMs": 12370
+        },
+        {
+          "text": "the",
+          "startMs": 12470,
+          "endMs": 12570
+        },
+        {
+          "text": "whole",
+          "startMs": 12570,
+          "endMs": 12795
+        },
+        {
+          "text": "number",
+          "startMs": 12795,
+          "endMs": 13145
+        },
+        {
+          "text": "is",
+          "startMs": 13145,
+          "endMs": 13295
+        },
+        {
+          "text": "divisible",
+          "startMs": 13295,
+          "endMs": 13770
+        },
+        {
+          "text": "by",
+          "startMs": 13770,
+          "endMs": 13945
+        },
+        {
+          "text": "nine.",
+          "startMs": 13945,
+          "endMs": 14545
+        }
+      ]
+    }
+  ],
+  "fingerprint": "5b98c53ba58a76e35232d567eab5e2caf40a9a4363942abac1c540e2bba22608"
+}

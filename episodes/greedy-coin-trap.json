@@ -1,0 +1,74 @@
+{
+  "id": "greedy-coin-trap",
+  "template": "coins",
+  "title": "The Greedy Algorithm Trap",
+  "publicationTarget": "2026-11-29",
+  "classification": "real",
+  "status": "review",
+  "hook": "Make *6* with the\nfewest coins",
+  "coins": {
+    "denominations": [
+      1,
+      3,
+      4
+    ],
+    "target": 6
+  },
+  "voice": {
+    "provider": "kokoro",
+    "voice": "af_heart",
+    "speed": 1.08,
+    "lexicon": {
+      "+": "plus"
+    }
+  },
+  "beats": [
+    {
+      "id": "hook",
+      "seconds": 3.6,
+      "narration": "Coins: one, three, four. Make six with the fewest."
+    },
+    {
+      "id": "greedy",
+      "seconds": 3.6,
+      "text": "Take the *biggest*\ncoin that fits",
+      "narration": "Biggest first: four, one, one. {greedy.count} coins."
+    },
+    {
+      "id": "best",
+      "seconds": 3.4,
+      "text": "Can you do *better*?",
+      "narration": "But {best.coins}: just {best.count} coins."
+    },
+    {
+      "id": "outro",
+      "seconds": 3.7,
+      "text": "With coins 1, 3, 4,\nbiggest-first\n*can lose*",
+      "narration": "For this coin set, biggest-first isn't always best."
+    }
+  ],
+  "cover": {
+    "headline": "IS BIGGEST\nALWAYS BEST?",
+    "sub": "Coins 1, 3, 4. Make 6 with the fewest.",
+    "beat": "greedy"
+  },
+  "sources": [
+    {
+      "claim": "With coins 1, 3, 4: largest-first pays 6 as 4 + 1 + 1, while the minimum is 2 coins (3 + 3); dynamic programming and exhaustive enumeration agree",
+      "ref": "computed and checked in src/sims/puzzles.test.ts"
+    },
+    {
+      "claim": "Largest-first is optimal for some coin systems (e.g. 1, 5, 10, 25) but not all",
+      "ref": "Kozen & Zaks (1994), Optimal bounds for the change-making problem, Theoretical Computer Science 123(2):377-388, https://doi.org/10.1016/0304-3975(94)90134-1; 1-500 checked in src/sims/puzzles.test.ts"
+    }
+  ],
+  "post": {
+    "caption": "Coins worth 1, 3 and 4. Make 6 with as few coins as possible.\n\nTaking the biggest coin that fits (the greedy strategy) gives 4 + 1 + 1: three coins. But 3 + 3 does it in two.\n\nThis coin set is a counterexample, not a rule: for coins like 1, 5, 10, 25, biggest-first always finds the fewest. We checked 1, 3, 4 with a full search of every combination. Can you find another amount where greedy loses?",
+    "hashtags": [
+      "#Algorithms",
+      "#ComputerScience",
+      "#CodingPuzzle",
+      "#CuriosityRendered"
+    ]
+  }
+}

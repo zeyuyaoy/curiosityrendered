@@ -1,0 +1,229 @@
+{
+  "audio": "narration.wav",
+  "sampleRate": 48000,
+  "beats": [
+    {
+      "id": "hook",
+      "start": 0.12,
+      "audioSeconds": 2.375,
+      "words": [
+        {
+          "text": "Thanksgiving",
+          "startMs": 370,
+          "endMs": 970
+        },
+        {
+          "text": "dinner",
+          "startMs": 970,
+          "endMs": 1245
+        },
+        {
+          "text": "for",
+          "startMs": 1245,
+          "endMs": 1395
+        },
+        {
+          "text": "eight",
+          "startMs": 1395,
+          "endMs": 1595
+        },
+        {
+          "text": "guests.",
+          "startMs": 1595,
+          "endMs": 2245
+        }
+      ]
+    },
+    {
+      "id": "question",
+      "start": 3.12,
+      "audioSeconds": 2.975,
+      "words": [
+        {
+          "text": "Every",
+          "startMs": 3370,
+          "endMs": 3645
+        },
+        {
+          "text": "pair",
+          "startMs": 3645,
+          "endMs": 3895
+        },
+        {
+          "text": "greets",
+          "startMs": 3895,
+          "endMs": 4220
+        },
+        {
+          "text": "once.",
+          "startMs": 4220,
+          "endMs": 4670
+        },
+        {
+          "text": "How",
+          "startMs": 4770,
+          "endMs": 4908
+        },
+        {
+          "text": "many",
+          "startMs": 4908,
+          "endMs": 5120
+        },
+        {
+          "text": "greetings?",
+          "startMs": 5120,
+          "endMs": 5845
+        }
+      ]
+    },
+    {
+      "id": "count",
+      "start": 6.32,
+      "audioSeconds": 3.725,
+      "words": [
+        {
+          "text": "Seven,",
+          "startMs": 6595,
+          "endMs": 6970
+        },
+        {
+          "text": "plus",
+          "startMs": 7020,
+          "endMs": 7245
+        },
+        {
+          "text": "six",
+          "startMs": 7245,
+          "endMs": 7495
+        },
+        {
+          "text": "new,",
+          "startMs": 7495,
+          "endMs": 7845
+        },
+        {
+          "text": "plus",
+          "startMs": 7945,
+          "endMs": 8195
+        },
+        {
+          "text": "five,",
+          "startMs": 8195,
+          "endMs": 8470
+        },
+        {
+          "text": "four,",
+          "startMs": 8520,
+          "endMs": 8720
+        },
+        {
+          "text": "three,",
+          "startMs": 8770,
+          "endMs": 8970
+        },
+        {
+          "text": "two,",
+          "startMs": 9020,
+          "endMs": 9220
+        },
+        {
+          "text": "one.",
+          "startMs": 9270,
+          "endMs": 9795
+        }
+      ]
+    },
+    {
+      "id": "reveal",
+      "start": 10.52,
+      "audioSeconds": 1.75,
+      "words": [
+        {
+          "text": "28",
+          "startMs": 10770,
+          "endMs": 11295
+        },
+        {
+          "text": "greetings.",
+          "startMs": 11295,
+          "endMs": 12020
+        }
+      ]
+    },
+    {
+      "id": "shortcut",
+      "start": 12.62,
+      "audioSeconds": 3.825,
+      "words": [
+        {
+          "text": "Or:",
+          "startMs": 12870,
+          "endMs": 13020
+        },
+        {
+          "text": "eight",
+          "startMs": 13070,
+          "endMs": 13245
+        },
+        {
+          "text": "times",
+          "startMs": 13245,
+          "endMs": 13545
+        },
+        {
+          "text": "seven,",
+          "startMs": 13545,
+          "endMs": 13945
+        },
+        {
+          "text": "halved,",
+          "startMs": 14020,
+          "endMs": 14470
+        },
+        {
+          "text": "since",
+          "startMs": 14545,
+          "endMs": 14770
+        },
+        {
+          "text": "each",
+          "startMs": 14770,
+          "endMs": 14995
+        },
+        {
+          "text": "pair",
+          "startMs": 14995,
+          "endMs": 15245
+        },
+        {
+          "text": "counts",
+          "startMs": 15245,
+          "endMs": 15545
+        },
+        {
+          "text": "twice.",
+          "startMs": 15545,
+          "endMs": 16195
+        }
+      ]
+    },
+    {
+      "id": "outro",
+      "start": 16.72,
+      "audioSeconds": 1.75,
+      "words": [
+        {
+          "text": "Happy",
+          "startMs": 17020,
+          "endMs": 17320
+        },
+        {
+          "text": "Thanksgiving!",
+          "startMs": 17320,
+          "endMs": 18220
+        }
+      ]
+    }
+  ],
+  "fingerprint": "a6c4611638ed7a941c7b7836d636aaeb20808969e3ab35e438d8ef8510694d24"
+}
