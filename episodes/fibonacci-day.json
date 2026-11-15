@@ -1,0 +1,72 @@
+{
+  "id": "fibonacci-day",
+  "template": "fibonacci",
+  "title": "Why Is November 23 Fibonacci Day?",
+  "publicationTarget": "2026-11-23",
+  "classification": "real",
+  "status": "review",
+  "hook": "Why is Nov 23\n*Fibonacci Day*?",
+  "fibonacci": {
+    "terms": 8
+  },
+  "voice": {
+    "provider": "kokoro",
+    "voice": "af_heart",
+    "speed": 1.08
+  },
+  "beats": [
+    {
+      "id": "hook",
+      "seconds": 3.6,
+      "narration": "November twenty-third: one, one, two, three."
+    },
+    {
+      "id": "rule",
+      "seconds": 3.0,
+      "text": "Add the *last two*",
+      "narration": "Each number adds the two before it."
+    },
+    {
+      "id": "think",
+      "seconds": 2.4,
+      "text": "What comes *next*?",
+      "narration": "What comes after {fib.b}?"
+    },
+    {
+      "id": "reveal",
+      "seconds": 2.7,
+      "text": "{fib.a} + {fib.b} = *{fib.next}*",
+      "narration": "{fib.a} plus {fib.b}: {fib.next}."
+    },
+    {
+      "id": "outro",
+      "seconds": 3.5,
+      "text": "Squares with these\nsides fit *perfectly*",
+      "narration": "They tile perfectly. Happy Fibonacci Day!"
+    }
+  ],
+  "cover": {
+    "headline": "WHAT'S HIDING\nIN 11/23?",
+    "sub": "Fibonacci Day, 23 November",
+    "beat": "outro"
+  },
+  "sources": [
+    {
+      "claim": "The Fibonacci sequence starts 1, 1, 2, 3, 5, 8, 13, 21 and each term is the sum of the two before it",
+      "ref": "OEIS A000045, https://oeis.org/A000045"
+    },
+    {
+      "claim": "Squares with sides 1, 1, 2, ..., 21 tile a 21 x 34 rectangle; 8 + 13 = 21",
+      "ref": "computed and checked in src/sims/puzzles.test.ts"
+    }
+  ],
+  "post": {
+    "caption": "November 23, written month first the U.S. way, is 11/23: the first four Fibonacci numbers, 1, 1, 2, 3.\n\nEach number is the sum of the two before it, so the sequence goes 1, 1, 2, 3, 5, 8, 13 … and next comes 21 (8 + 13).\n\nSquares with those side lengths fit together into a 21 × 34 rectangle. The curve through them is made of quarter circles: it approximates a golden spiral but isn’t exactly one.\n\nDid you get 21 before the reveal?",
+    "hashtags": [
+      "#FibonacciDay",
+      "#Fibonacci",
+      "#MathPuzzle",
+      "#CuriosityRendered"
+    ]
+  }
+}

@@ -1,8 +1,9 @@
 import React from "react";
 import { AbsoluteFill, useCurrentFrame } from "remotion";
-import { inter, tabular } from "../brand/fonts";
+import { inter } from "../brand/fonts";
 import { brand, safeWidth } from "../brand/tokens";
-import { enter, ramp } from "../components/motion";
+import { Countdown } from "../components/Countdown";
+import { enter } from "../components/motion";
 import { Reveal } from "../components/Reveal";
 import { Sfx } from "../components/Sfx";
 import { useBeatStart, useEpisode } from "../episode/context";
@@ -20,8 +21,6 @@ export const Challenge: React.FC = () => {
   const { options, answer, explanation } = spec.challenge;
   const thinkLen = timeline.beats.find((b) => b.id === "think")!.duration;
   const thinking = frame >= think && frame < reveal;
-  const secondsLeft = Math.ceil((think + thinkLen - frame) / FPS);
-  const ring = ramp(frame, think, think + thinkLen, (t) => t);
 
   return (
     <AbsoluteFill style={{ top: layout.bodyTop, height: layout.bodyBottom - layout.bodyTop, left: safe.left, width: safeWidth, gap: 26 }}>
@@ -51,14 +50,8 @@ export const Challenge: React.FC = () => {
         );
       })}
       {thinking ? (
-        <div style={{ alignSelf: "center", position: "relative", width: 220, height: 220, marginTop: 20 }}>
-          <svg width={220} height={220} style={{ position: "absolute", transform: "rotate(-90deg)" }}>
-            <circle cx={110} cy={110} r={96} fill="none" stroke={color.muted} strokeWidth={10} />
-            <circle cx={110} cy={110} r={96} fill="none" stroke={color.secondary} strokeWidth={10} strokeDasharray={603} strokeDashoffset={603 * ring} strokeLinecap="round" />
-          </svg>
-          <div style={{ position: "absolute", inset: 0, display: "grid", placeItems: "center", fontFamily: inter, fontWeight: 800, fontSize: size.hook, color: color.fg, ...tabular }}>
-            {secondsLeft}
-          </div>
+        <div style={{ alignSelf: "center", marginTop: 20 }}>
+          <Countdown from={think} frames={thinkLen} />
         </div>
       ) : null}
       {Array.from({ length: Math.ceil(thinkLen / FPS) }, (_, k) => (

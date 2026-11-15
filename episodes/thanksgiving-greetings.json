@@ -1,0 +1,74 @@
+{
+  "id": "thanksgiving-greetings",
+  "template": "handshakes",
+  "title": "Eight Guests, How Many Greetings?",
+  "publicationTarget": "2026-11-26",
+  "classification": "hypothetical",
+  "status": "review",
+  "hook": "*Thanksgiving* dinner\nfor 8 guests",
+  "table": {
+    "guests": 8
+  },
+  "voice": {
+    "provider": "kokoro",
+    "voice": "af_heart",
+    "speed": 1.08
+  },
+  "beats": [
+    {
+      "id": "hook",
+      "seconds": 3.0,
+      "narration": "Thanksgiving dinner for eight guests."
+    },
+    {
+      "id": "question",
+      "seconds": 3.2,
+      "text": "Every pair greets\n*once*. How many?",
+      "narration": "Every pair greets once. How many greetings?"
+    },
+    {
+      "id": "count",
+      "seconds": 4.2,
+      "text": "",
+      "narration": "Seven, plus six new, plus five, four, three, two, one."
+    },
+    {
+      "id": "reveal",
+      "seconds": 2.1,
+      "text": "",
+      "narration": "{pairs} greetings."
+    },
+    {
+      "id": "shortcut",
+      "seconds": 4.1,
+      "text": "",
+      "narration": "Or: eight times seven, halved, since each pair counts twice."
+    },
+    {
+      "id": "outro",
+      "seconds": 2.0,
+      "text": "Happy\n*Thanksgiving*!",
+      "narration": "Happy Thanksgiving!"
+    }
+  ],
+  "cover": {
+    "headline": "HOW MANY\nGREETINGS?",
+    "sub": "Thanksgiving dinner for 8 guests",
+    "beat": "hook"
+  },
+  "sources": [
+    {
+      "claim": "8 guests form 7 + 6 + 5 + 4 + 3 + 2 + 1 = 8 x 7 / 2 = 28 distinct pairs",
+      "ref": "enumerated and checked in src/sims/puzzles.test.ts"
+    }
+  ],
+  "post": {
+    "caption": "Eight guests sit down for Thanksgiving dinner, and every pair greets each other exactly once. How many greetings is that?\n\nGuest 1 greets 7 people, guest 2 greets 6 new people, and so on: 7 + 6 + 5 + 4 + 3 + 2 + 1 = 28.\n\nShortcut: each of the 8 guests greets 7 others, which counts every pair twice, so 8 × 7 ÷ 2 = 28. What would it be with 10 guests?",
+    "hashtags": [
+      "#Thanksgiving",
+      "#MathPuzzle",
+      "#Combinatorics",
+      "#CuriosityRendered"
+    ]
+  }
+}

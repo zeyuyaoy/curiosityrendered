@@ -5,258 +5,235 @@
     {
       "id": "hook",
       "start": 0.12,
-      "audioSeconds": 2.85,
+      "audioSeconds": 1.5,
       "words": [
         {
-          "text": "Three",
-          "startMs": 395,
-          "endMs": 620
-        },
-        {
-          "text": "doors.",
-          "startMs": 620,
-          "endMs": 1095
-        },
-        {
-          "text": "One",
-          "startMs": 1170,
-          "endMs": 1420
-        },
-        {
-          "text": "prize.",
-          "startMs": 1420,
-          "endMs": 1820
-        },
-        {
           "text": "Pick",
-          "startMs": 1870,
-          "endMs": 2058
+          "startMs": 445,
+          "endMs": 632
         },
         {
           "text": "a",
-          "startMs": 2058,
-          "endMs": 2120
+          "startMs": 632,
+          "endMs": 720
         },
         {
           "text": "door.",
-          "startMs": 2120,
-          "endMs": 2695
+          "startMs": 720,
+          "endMs": 1345
         }
       ]
     },
     {
       "id": "question",
-      "start": 3.62,
-      "audioSeconds": 4.25,
+      "start": 1.887,
+      "audioSeconds": 2.35,
       "words": [
         {
           "text": "The",
-          "startMs": 3870,
-          "endMs": 3970
+          "startMs": 2137,
+          "endMs": 2212
         },
         {
           "text": "host",
-          "startMs": 3970,
-          "endMs": 4295
+          "startMs": 2212,
+          "endMs": 2624
         },
         {
-          "text": "knows",
-          "startMs": 4295,
-          "endMs": 4595
+          "text": "opens",
+          "startMs": 2624,
+          "endMs": 2974
         },
         {
-          "text": "where",
-          "startMs": 4595,
-          "endMs": 4758
-        },
-        {
-          "text": "it",
-          "startMs": 4758,
-          "endMs": 4858
-        },
-        {
-          "text": "is.",
-          "startMs": 4858,
-          "endMs": 5320
-        },
-        {
-          "text": "They",
-          "startMs": 5420,
-          "endMs": 5595
-        },
-        {
-          "text": "always",
-          "startMs": 5595,
-          "endMs": 5970
-        },
-        {
-          "text": "open",
-          "startMs": 5970,
-          "endMs": 6245
-        },
-        {
-          "text": "another,",
-          "startMs": 6245,
-          "endMs": 6645
+          "text": "an",
+          "startMs": 2974,
+          "endMs": 3087
         },
         {
           "text": "empty",
-          "startMs": 6720,
-          "endMs": 7020
+          "startMs": 3087,
+          "endMs": 3412
         },
         {
           "text": "door.",
-          "startMs": 7020,
-          "endMs": 7620
+          "startMs": 3412,
+          "endMs": 3962
         }
       ]
     },
     {
       "id": "think",
-      "start": 8.42,
+      "start": 4.52,
       "audioSeconds": 1.725,
       "words": [
         {
           "text": "Stay",
-          "startMs": 8770,
-          "endMs": 9045
+          "startMs": 4870,
+          "endMs": 5145
         },
         {
           "text": "or",
-          "startMs": 9045,
-          "endMs": 9208
+          "startMs": 5145,
+          "endMs": 5308
         },
         {
           "text": "switch?",
-          "startMs": 9208,
-          "endMs": 9870
+          "startMs": 5308,
+          "endMs": 5970
         }
       ]
     },
     {
       "id": "reveal",
-      "start": 10.72,
-      "audioSeconds": 4.4,
+      "start": 6.52,
+      "audioSeconds": 4.825,
       "words": [
         {
-          "text": "Switching",
-          "startMs": 10995,
-          "endMs": 11370
+          "text": "Prize",
+          "startMs": 6770,
+          "endMs": 7070
         },
         {
-          "text": "wins",
-          "startMs": 11370,
-          "endMs": 11720
-        },
-        {
-          "text": "whenever",
-          "startMs": 11720,
-          "endMs": 12058
+          "text": "behind",
+          "startMs": 7070,
+          "endMs": 7432
         },
         {
           "text": "your",
-          "startMs": 12058,
-          "endMs": 12195
+          "startMs": 7432,
+          "endMs": 7545
         },
         {
-          "text": "first",
-          "startMs": 12195,
-          "endMs": 12470
+          "text": "door?",
+          "startMs": 7545,
+          "endMs": 7945
         },
         {
-          "text": "pick",
-          "startMs": 12470,
-          "endMs": 12657
+          "text": "Stay",
+          "startMs": 8058,
+          "endMs": 8370
         },
         {
-          "text": "is",
-          "startMs": 12657,
-          "endMs": 12795
+          "text": "wins.",
+          "startMs": 8370,
+          "endMs": 8870
         },
         {
-          "text": "wrong.",
-          "startMs": 12795,
-          "endMs": 13370
+          "text": "Behind",
+          "startMs": 8945,
+          "endMs": 9308
         },
         {
-          "text": "That's",
-          "startMs": 13507,
-          "endMs": 13832
+          "text": "either",
+          "startMs": 9308,
+          "endMs": 9532
         },
         {
-          "text": "two",
-          "startMs": 13832,
-          "endMs": 14045
+          "text": "other",
+          "startMs": 9532,
+          "endMs": 9720
         },
         {
-          "text": "out",
-          "startMs": 14045,
-          "endMs": 14208
+          "text": "door?",
+          "startMs": 9720,
+          "endMs": 10045
         },
         {
-          "text": "of",
-          "startMs": 14208,
-          "endMs": 14295
+          "text": "Switch",
+          "startMs": 10158,
+          "endMs": 10445
         },
         {
-          "text": "three.",
-          "startMs": 14295,
-          "endMs": 14870
+          "text": "wins.",
+          "startMs": 10445,
+          "endMs": 11095
         }
       ]
     },
     {
       "id": "simulation",
-      "start": 15.82,
-      "audioSeconds": 3.1,
+      "start": 12.52,
+      "audioSeconds": 2.875,
       "words": [
         {
           "text": "We",
-          "startMs": 16070,
-          "endMs": 16195
+          "startMs": 12770,
+          "endMs": 12907
         },
         {
-          "text": "played",
-          "startMs": 16195,
-          "endMs": 16458
+          "text": "simulated",
+          "startMs": 12907,
+          "endMs": 13470
         },
         {
-          "text": "it",
-          "startMs": 16458,
-          "endMs": 16532
+          "text": "a",
+          "startMs": 13470,
+          "endMs": 13582
         },
         {
-          "text": "again",
-          "startMs": 16532,
-          "endMs": 16807
+          "text": "hundred",
+          "startMs": 13582,
+          "endMs": 14070
         },
         {
           "text": "and",
-          "startMs": 16807,
-          "endMs": 16908
+          "startMs": 14070,
+          "endMs": 14195
         },
         {
-          "text": "again.",
-          "startMs": 16908,
+          "text": "twenty",
+          "startMs": 14195,
+          "endMs": 14495
+        },
+        {
+          "text": "games.",
+          "startMs": 14495,
+          "endMs": 15145
+        }
+      ]
+    },
+    {
+      "id": "outro",
+      "start": 16.02,
+      "audioSeconds": 2.525,
+      "words": [
+        {
+          "text": "Switching",
+          "startMs": 16295,
+          "endMs": 16670
+        },
+        {
+          "text": "wins",
+          "startMs": 16670,
+          "endMs": 16982
+        },
+        {
+          "text": "two",
+          "startMs": 16982,
+          "endMs": 17195
+        },
+        {
+          "text": "out",
+          "startMs": 17195,
+          "endMs": 17332
+        },
+        {
+          "text": "of",
+          "startMs": 17332,
           "endMs": 17420
         },
         {
-          "text": "Here's",
-          "startMs": 17557,
-          "endMs": 17857
+          "text": "three",
+          "startMs": 17420,
+          "endMs": 17645
         },
         {
-          "text": "what",
-          "startMs": 17857,
-          "endMs": 17995
-        },
-        {
-          "text": "happened.",
-          "startMs": 17995,
-          "endMs": 18670
+          "text": "times.",
+          "startMs": 17645,
+          "endMs": 18295
         }
       ]
     }
   ],
-  "fingerprint": "ec9a28be62714e333bb03fbfccd7f0e123624f8324c3bd20badc4bf642930b2b"
+  "fingerprint": "1012b667721d705d6fd6b6d4cee58168880e56aee4be9a9cb543eb5a36670dc6"
 }

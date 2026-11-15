@@ -8,7 +8,7 @@ import { FPS } from "../episode/timeline";
 
 const HOLD_MS = 500;
 
-export const Captions: React.FC<{ captions: Caption[] }> = ({ captions }) => {
+export const Captions: React.FC<{ captions: Caption[]; top?: number }> = ({ captions, top = brand.layout.bodyBottom + 14 }) => {
   const ms = (useCurrentFrame() / FPS) * 1000;
   const pages = useMemo(() => toPages(captions), [captions]);
   const i = pages.findLastIndex((p) => ms >= p.startMs);
@@ -20,7 +20,7 @@ export const Captions: React.FC<{ captions: Caption[] }> = ({ captions }) => {
         position: "absolute",
         left: brand.safe.left,
         width: safeWidth,
-        top: brand.layout.bodyBottom + 14,
+        top,
         display: "flex",
         justifyContent: "center",
       }}

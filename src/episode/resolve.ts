@@ -1,4 +1,5 @@
 import { computeMaze, type Facts } from "../sims/compute";
+import { puzzleFacts } from "../sims/puzzles";
 import type { EpisodeSpec } from "./schema";
 import { toTimeline } from "./timeline";
 
@@ -8,7 +9,7 @@ export const fill = (s: string, facts: Facts) =>
 
 export const resolveEpisode = (spec: EpisodeSpec) => {
   const maze = spec.template === "simulation" && spec.sim.kind === "maze" ? computeMaze(spec.sim) : null;
-  const facts: Facts = maze?.facts ?? {};
+  const facts: Facts = maze?.facts ?? puzzleFacts(spec);
   const beats = spec.beats.map((b) => ({
     ...b,
     narration: fill(b.narration, facts),

@@ -49,9 +49,9 @@ export const Cover: React.FC<Pick<EpisodeProps, "spec" | "debug">> = ({ spec, de
       <div
         style={{
           position: "absolute",
-          left: safe.left,
+          left: safe.left + (r.spec.template === "ebbinghaus" ? 20 : 0),
           width: safeWidth,
-          top: crops.square.top + 10,
+          top: crops.square.top + (r.spec.template === "ebbinghaus" ? 56 : 10),
           fontFamily: inter,
           fontWeight: 800,
           fontSize: Math.min(124, Math.floor(safeWidth / (Math.max(...r.spec.cover.headline.split("\n").map((l) => l.length)) * 0.66))),

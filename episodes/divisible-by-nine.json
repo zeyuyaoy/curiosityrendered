@@ -1,0 +1,70 @@
+{
+  "id": "divisible-by-nine",
+  "template": "digit-sum",
+  "title": "The Divisibility Trick",
+  "publicationTarget": "2026-12-01",
+  "classification": "real",
+  "status": "review",
+  "hook": "Can you check\n36 digits *without*\ndividing?",
+  "number": {
+    "seed": 20261202,
+    "digits": 36
+  },
+  "voice": {
+    "provider": "kokoro",
+    "voice": "af_heart",
+    "speed": 1.08,
+    "lexicon": {
+      "+": "plus"
+    }
+  },
+  "beats": [
+    {
+      "id": "hook",
+      "seconds": 3.2,
+      "narration": "Is this divisible by nine? Don't divide."
+    },
+    {
+      "id": "sum",
+      "seconds": 3.1,
+      "text": "*Add* the digits",
+      "narration": "Add its digits: {sum}."
+    },
+    {
+      "id": "again",
+      "seconds": 3.5,
+      "text": "Add *again*",
+      "narration": "{sum.digits} is {sum.sum}. So, yes!"
+    },
+    {
+      "id": "outro",
+      "seconds": 5.7,
+      "text": "Digit sum divisible\nby 9? So is the\n*whole number*",
+      "narration": "If the digits add to a multiple of nine, the whole number is divisible by nine."
+    }
+  ],
+  "cover": {
+    "headline": "36 DIGITS.\nNO DIVIDING.",
+    "sub": "Is it divisible by 9?",
+    "beat": "hook"
+  },
+  "sources": [
+    {
+      "claim": "The 36-digit number is divisible by 9 (direct BigInt division) and its digit sums are 135 then 9",
+      "ref": "computed and checked in src/sims/puzzles.test.ts"
+    },
+    {
+      "claim": "A number and its digit sum leave the same remainder on division by 9, because each power of ten is one more than a multiple of 9",
+      "ref": "elementary number theory; spot-checked in src/sims/puzzles.test.ts"
+    }
+  ],
+  "post": {
+    "caption": "Can you tell whether this 36-digit number is divisible by 9 without dividing?\n\nAdd its digits: 135. Add again: 1 + 3 + 5 = 9. So yes, it’s divisible by 9.\n\nWhy it works: 10 = 9 + 1, 100 = 99 + 1, 1,000 = 999 + 1, and so on. So every number equals a multiple of 9 plus its digit sum, which means it’s divisible by 9 exactly when its digit sum is.\n\nThe number was generated from a fixed seed, and we checked it by direct division.",
+    "hashtags": [
+      "#NumberTheory",
+      "#MathTrick",
+      "#MathPuzzle",
+      "#CuriosityRendered"
+    ]
+  }
+}

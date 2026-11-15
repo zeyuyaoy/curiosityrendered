@@ -10,10 +10,11 @@ export const Headline: React.FC<{ hook: string; beats: TimedBeat[] }> = ({ hook,
   const frame = useCurrentFrame();
   const slots = beats
     .map((b, i) => ({ at: b.from, text: i === 0 ? hook : b.text, big: i === 0 }))
-    .filter((s): s is { at: number; text: string; big: boolean } => Boolean(s.text));
+    .filter((s) => s.text !== undefined);
   const k = slots.findLastIndex((s) => frame >= s.at);
   if (k < 0) return null;
   const s = slots[k];
+  if (!s.text) return null;
   const next = slots[k + 1]?.at;
   return (
     <div

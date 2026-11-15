@@ -7,7 +7,7 @@
   "status": "review",
   "hook": "Which ~orange circle~\nis *bigger*?",
   "illusion": {
-    "radius": 78
+    "radius": 88
   },
   "voice": {
     "provider": "kokoro",
@@ -17,28 +17,28 @@
   "beats": [
     {
       "id": "hook",
-      "seconds": 4.4,
+      "seconds": 2.8,
       "narration": "Which orange circle is bigger?"
     },
     {
       "id": "reveal",
-      "seconds": 1.7,
+      "seconds": 2.2,
       "text": "Let’s *measure*."
     },
     {
       "id": "answer",
       "seconds": 2.3,
+      "text": "",
       "narration": "Exactly the same size."
     },
     {
       "id": "context",
-      "seconds": 3.6,
-      "text": "Same size.\nDifferent ~surroundings~.",
-      "narration": "The neighbours can change how big they look."
+      "seconds": 3.2,
+      "narration": "The surroundings can change how big they look."
     },
     {
       "id": "outro",
-      "seconds": 1.0
+      "seconds": 0.5
     }
   ],
   "cover": {
@@ -52,7 +52,7 @@
     }
   ],
   "post": {
-    "caption": "The orange circles are exactly the same size. The circles around them can change how big they look. That’s the Ebbinghaus illusion.",
+    "caption": "Which orange circle looked bigger to you? Both have exactly the same diameter. The circles around them can change how big they appear. That’s the Ebbinghaus illusion.",
     "hashtags": ["#OpticalIllusion", "#EbbinghausIllusion", "#VisualPerception"]
   }
 }

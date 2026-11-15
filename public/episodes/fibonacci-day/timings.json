@@ -1,0 +1,177 @@
+{
+  "audio": "narration.wav",
+  "sampleRate": 48000,
+  "beats": [
+    {
+      "id": "hook",
+      "start": 0.12,
+      "audioSeconds": 3.075,
+      "words": [
+        {
+          "text": "November",
+          "startMs": 370,
+          "endMs": 745
+        },
+        {
+          "text": "twenty-third:",
+          "startMs": 745,
+          "endMs": 1495
+        },
+        {
+          "text": "one,",
+          "startMs": 1608,
+          "endMs": 1845
+        },
+        {
+          "text": "one,",
+          "startMs": 1895,
+          "endMs": 2120
+        },
+        {
+          "text": "two,",
+          "startMs": 2170,
+          "endMs": 2345
+        },
+        {
+          "text": "three.",
+          "startMs": 2395,
+          "endMs": 2945
+        }
+      ]
+    },
+    {
+      "id": "rule",
+      "start": 3.72,
+      "audioSeconds": 2.35,
+      "words": [
+        {
+          "text": "Each",
+          "startMs": 3970,
+          "endMs": 4170
+        },
+        {
+          "text": "number",
+          "startMs": 4170,
+          "endMs": 4508
+        },
+        {
+          "text": "adds",
+          "startMs": 4508,
+          "endMs": 4783
+        },
+        {
+          "text": "the",
+          "startMs": 4783,
+          "endMs": 4870
+        },
+        {
+          "text": "two",
+          "startMs": 4870,
+          "endMs": 5058
+        },
+        {
+          "text": "before",
+          "startMs": 5058,
+          "endMs": 5445
+        },
+        {
+          "text": "it.",
+          "startMs": 5445,
+          "endMs": 5820
+        }
+      ]
+    },
+    {
+      "id": "think",
+      "start": 6.72,
+      "audioSeconds": 2.025,
+      "words": [
+        {
+          "text": "What",
+          "startMs": 6970,
+          "endMs": 7120
+        },
+        {
+          "text": "comes",
+          "startMs": 7120,
+          "endMs": 7445
+        },
+        {
+          "text": "after",
+          "startMs": 7445,
+          "endMs": 7745
+        },
+        {
+          "text": "13?",
+          "startMs": 7745,
+          "endMs": 8495
+        }
+      ]
+    },
+    {
+      "id": "reveal",
+      "start": 9.12,
+      "audioSeconds": 2.4,
+      "words": [
+        {
+          "text": "8",
+          "startMs": 9370,
+          "endMs": 9545
+        },
+        {
+          "text": "plus",
+          "startMs": 9545,
+          "endMs": 9795
+        },
+        {
+          "text": "13:",
+          "startMs": 9795,
+          "endMs": 10445
+        },
+        {
+          "text": "21.",
+          "startMs": 10445,
+          "endMs": 11270
+        }
+      ]
+    },
+    {
+      "id": "outro",
+      "start": 11.82,
+      "audioSeconds": 3.2,
+      "words": [
+        {
+          "text": "They",
+          "startMs": 12070,
+          "endMs": 12232
+        },
+        {
+          "text": "tile",
+          "startMs": 12232,
+          "endMs": 12545
+        },
+        {
+          "text": "perfectly.",
+          "startMs": 12545,
+          "endMs": 13245
+        },
+        {
+          "text": "Happy",
+          "startMs": 13370,
+          "endMs": 13670
+        },
+        {
+          "text": "Fibonacci",
+          "startMs": 13670,
+          "endMs": 14245
+        },
+        {
+          "text": "Day!",
+          "startMs": 14245,
+          "endMs": 14770
+        }
+      ]
+    }
+  ],
+  "fingerprint": "7a4719dd2dddd23353a64938132f81a005e2d67a04b80d5933f8d8df0dc0b3a8"
+}

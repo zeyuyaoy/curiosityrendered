@@ -64,6 +64,13 @@ export const EpisodeSpec = z.discriminatedUnion("template", [
     template: z.literal("ebbinghaus"),
     illusion: z.object({ radius: z.number().int().min(64).max(88) }),
   }),
+  Base.extend({ template: z.literal("fibonacci"), fibonacci: z.object({ terms: z.literal(8) }) }),
+  Base.extend({ template: z.literal("handshakes"), table: z.object({ guests: z.number().int().min(4).max(10) }) }),
+  Base.extend({
+    template: z.literal("coins"),
+    coins: z.object({ denominations: z.array(z.number().int().min(1)).min(2).max(4), target: z.number().int().min(2).max(12) }),
+  }),
+  Base.extend({ template: z.literal("digit-sum"), number: z.object({ seed: z.uint32(), digits: z.number().int().min(12).max(36) }) }),
 ]);
 
 export type EpisodeSpec = z.output<typeof EpisodeSpec>;

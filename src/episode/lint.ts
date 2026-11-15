@@ -26,9 +26,13 @@ export const lintEpisode = (raw: unknown) => {
     explainer: spec.template === "explainer" ? [...spec.points.map((_, i) => `point-${i + 1}`), "takeaway"] : [],
     "monty-hall": ["question", "think", "reveal", "simulation"],
     ebbinghaus: ["reveal", "answer", "context"],
+    fibonacci: ["rule", "think", "reveal"],
+    handshakes: ["question", "count", "reveal", "shortcut"],
+    coins: ["greedy", "best"],
+    "digit-sum": ["sum", "again"],
   }[spec.template];
   for (const r of required) if (!ids.includes(r)) errors.push(`beats: ${spec.template} template needs a "${r}" beat`);
-  if ((spec.template === "monty-hall" || spec.template === "ebbinghaus") &&
+  if (!["simulation", "challenge", "explainer"].includes(spec.template) &&
       ids.join(",") !== ["hook", ...required, "outro"].join(","))
     errors.push(`beats: ${spec.template} expects hook, ${required.join(", ")}, outro in order`);
   if (spec.template === "challenge" && spec.challenge.answer >= spec.challenge.options.length)

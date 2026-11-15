@@ -1,0 +1,190 @@
+{
+  "audio": "narration.wav",
+  "sampleRate": 48000,
+  "beats": [
+    {
+      "id": "hook",
+      "start": 0.12,
+      "audioSeconds": 3.3,
+      "words": [
+        {
+          "text": "Coins:",
+          "startMs": 370,
+          "endMs": 720
+        },
+        {
+          "text": "one,",
+          "startMs": 770,
+          "endMs": 945
+        },
+        {
+          "text": "three,",
+          "startMs": 995,
+          "endMs": 1195
+        },
+        {
+          "text": "four.",
+          "startMs": 1245,
+          "endMs": 1670
+        },
+        {
+          "text": "Make",
+          "startMs": 1795,
+          "endMs": 2020
+        },
+        {
+          "text": "six",
+          "startMs": 2020,
+          "endMs": 2282
+        },
+        {
+          "text": "with",
+          "startMs": 2282,
+          "endMs": 2383
+        },
+        {
+          "text": "the",
+          "startMs": 2383,
+          "endMs": 2482
+        },
+        {
+          "text": "fewest.",
+          "startMs": 2482,
+          "endMs": 3170
+        }
+      ]
+    },
+    {
+      "id": "greedy",
+      "start": 3.72,
+      "audioSeconds": 3.1,
+      "words": [
+        {
+          "text": "Biggest",
+          "startMs": 3970,
+          "endMs": 4270
+        },
+        {
+          "text": "first:",
+          "startMs": 4270,
+          "endMs": 4645
+        },
+        {
+          "text": "four,",
+          "startMs": 4720,
+          "endMs": 4895
+        },
+        {
+          "text": "one,",
+          "startMs": 4945,
+          "endMs": 5120
+        },
+        {
+          "text": "one.",
+          "startMs": 5158,
+          "endMs": 5520
+        },
+        {
+          "text": "3",
+          "startMs": 5658,
+          "endMs": 5895
+        },
+        {
+          "text": "coins.",
+          "startMs": 5895,
+          "endMs": 6570
+        }
+      ]
+    },
+    {
+      "id": "best",
+      "start": 7.32,
+      "audioSeconds": 2.7,
+      "words": [
+        {
+          "text": "But",
+          "startMs": 7545,
+          "endMs": 7695
+        },
+        {
+          "text": "3",
+          "startMs": 7695,
+          "endMs": 7920
+        },
+        {
+          "text": "plus",
+          "startMs": 7920,
+          "endMs": 8195
+        },
+        {
+          "text": "3:",
+          "startMs": 8195,
+          "endMs": 8570
+        },
+        {
+          "text": "just",
+          "startMs": 8670,
+          "endMs": 8895
+        },
+        {
+          "text": "2",
+          "startMs": 8895,
+          "endMs": 9095
+        },
+        {
+          "text": "coins.",
+          "startMs": 9095,
+          "endMs": 9770
+        }
+      ]
+    },
+    {
+      "id": "outro",
+      "start": 10.72,
+      "audioSeconds": 3.425,
+      "words": [
+        {
+          "text": "For",
+          "startMs": 10970,
+          "endMs": 11082
+        },
+        {
+          "text": "this",
+          "startMs": 11082,
+          "endMs": 11270
+        },
+        {
+          "text": "coin",
+          "startMs": 11270,
+          "endMs": 11570
+        },
+        {
+          "text": "set,",
+          "startMs": 11570,
+          "endMs": 11945
+        },
+        {
+          "text": "biggest-first",
+          "startMs": 12045,
+          "endMs": 12670
+        },
+        {
+          "text": "isn't",
+          "startMs": 12670,
+          "endMs": 12920
+        },
+        {
+          "text": "always",
+          "startMs": 12920,
+          "endMs": 13295
+        },
+        {
+          "text": "best.",
+          "startMs": 13295,
+          "endMs": 13895
+        }
+      ]
+    }
+  ],
+  "fingerprint": "81ac65681a82b6a7707386f97d95acd1a6444f47b5b6bdf7fe0b4e839b3dfe3e"
+}

@@ -36,78 +36,78 @@
     },
     {
       "id": "answer",
-      "start": 6.22,
+      "start": 5.12,
       "audioSeconds": 2,
       "words": [
         {
           "text": "Exactly",
-          "startMs": 6495,
-          "endMs": 6982
+          "startMs": 5395,
+          "endMs": 5882
         },
         {
           "text": "the",
-          "startMs": 6982,
-          "endMs": 7070
+          "startMs": 5882,
+          "endMs": 5970
         },
         {
           "text": "same",
-          "startMs": 7070,
-          "endMs": 7345
+          "startMs": 5970,
+          "endMs": 6245
         },
         {
           "text": "size.",
-          "startMs": 7345,
-          "endMs": 7970
+          "startMs": 6245,
+          "endMs": 6870
         }
       ]
     },
     {
       "id": "context",
-      "start": 8.52,
-      "audioSeconds": 2.525,
+      "start": 7.42,
+      "audioSeconds": 2.825,
       "words": [
         {
           "text": "The",
-          "startMs": 8770,
-          "endMs": 8845
+          "startMs": 7670,
+          "endMs": 7745
         },
         {
-          "text": "neighbours",
-          "startMs": 8845,
-          "endMs": 9295
+          "text": "surroundings",
+          "startMs": 7745,
+          "endMs": 8495
         },
         {
           "text": "can",
-          "startMs": 9295,
-          "endMs": 9445
+          "startMs": 8495,
+          "endMs": 8620
         },
         {
           "text": "change",
-          "startMs": 9445,
-          "endMs": 9745
+          "startMs": 8620,
+          "endMs": 8920
         },
         {
           "text": "how",
-          "startMs": 9745,
-          "endMs": 9920
+          "startMs": 8920,
+          "endMs": 9095
         },
         {
           "text": "big",
-          "startMs": 9920,
-          "endMs": 10145
+          "startMs": 9095,
+          "endMs": 9320
         },
         {
           "text": "they",
-          "startMs": 10145,
-          "endMs": 10295
+          "startMs": 9320,
+          "endMs": 9470
         },
         {
           "text": "look.",
-          "startMs": 10295,
-          "endMs": 10795
+          "startMs": 9470,
+          "endMs": 9995
         }
       ]
     }
   ],
-  "fingerprint": "9c72eae652090ce2fae8638796ea28d4e3c747dd0c558d69499581ecff55dd9a"
+  "fingerprint": "9d88fbee7a137eec54547ba990ee21263c133daf4902089fcab98baecf936394"
 }
